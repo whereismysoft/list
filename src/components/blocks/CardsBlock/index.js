@@ -35,9 +35,9 @@ export default class CardsBlock extends Component {
                         </Button>
                     </div>
                 </div>
-                <div className={styles['cardsBlock--content']}>
+                <div className={classnames(styles['cardsBlock--content'], styles[this.state.typeOfGrid])}>
                     {this.props.cards.map(
-                        (item, index) => <Card idx={index + 1} key={`${index}${item.title}`} {...item} />
+                        (item, index) => <Card type={this.state.typeOfGrid} idx={index + 1} key={`${index}${item.title}`} {...item} />
                     )}
                 </div>
             </div>

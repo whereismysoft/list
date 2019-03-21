@@ -32,3 +32,16 @@
 
     margin-left: auto;
 }
+
+.cardsBlock--content {
+    display: flex;
+}
+
+.cardsBlock--content.list {
+    flex-direction: column;
+}
+
+.cardsBlock--content.block {
+    flex-direction: row;
+    flex-wrap: wrap;
+}

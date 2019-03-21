@@ -1,9 +1,11 @@
 .card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     width: 100%;
 
-    padding: 0 15px;
+    padding: 10px 15px;
     box-sizing: border-box;
 
     background-color: #a0c3e2;
@@ -12,11 +14,10 @@
 
 .card--header {
     display: flex;
-    width: 100%;
+    width: calc(100%/4);
 
     border-bottom: 1px solid white;
     box-sizing: border-box;
-    padding: 10px 0;
 }
 
 .card--index {
@@ -25,7 +26,7 @@
 }
 
 .card--title {
-    width: calc(100% / 4);
+    width: 100%;
     text-align: center;
 }
 
@@ -33,6 +34,8 @@
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
 }
 
 .card--point {
@@ -45,5 +48,24 @@
 }
 
 .card--description {
-    padding: 10px 0;
+    margin-top: 10px;
+    width: 100%;
 }
+
+.card.block {
+    width: calc((100% - (2 * 5px))/3);
+}
+
+.card.block:nth-child(3n + 2) {
+    margin: 0 5px 5px 5px
+}
+
+.card.block .card--header {
+    width: 100%;
+    align-self: end;
+    padding-bottom: 10px;
+}
+
+.card.block .card--pointsBlock {
+    padding-top: 10px;
+} 
