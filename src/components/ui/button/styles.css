@@ -1,0 +1,36 @@
+.button {
+    width: calc((100% - 2*(20px))/ 2);
+    margin: 5px 10px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: 15px;
+
+    background-color: #3f51b5;
+    border: none;
+
+    cursor: pointer;
+    padding: unset;
+
+    color: white;
+
+    outline: none;
+}
+
+.button:hover {
+    background-color: #717dbf;
+}
+
+.button.transparent {
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.button.isSmall {
+    margin: unset;
+    width: auto;
+    height: auto;
+}

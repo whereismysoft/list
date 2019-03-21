@@ -1,0 +1,49 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    background-color: #a0c3e2;
+    margin-bottom: 5px;
+}
+
+.card--header {
+    display: flex;
+    width: 100%;
+
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.card--index {
+    color: white;
+    font-weight: bold;
+}
+
+.card--title {
+    width: calc(100% / 4);
+    text-align: center;
+}
+
+.card--pointsBlock {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.card--point {
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.card--point:nth-child(n + 4) {
+    margin-top: 10px;
+}
+
+.card--description {
+    padding: 10px 0;
+}

@@ -1,0 +1,29 @@
+.iconBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.iconBlock--img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.iconBlock:hover {
+    background-color: #717dbf;
+}
+
+.iconBlock:hover .iconBlock--img {
+    filter: invert(100%)
+}
+
+.iconBlock.isActive {
+    background-color: #3f51b5;
+}
+
+.iconBlock.isActive .iconBlock--img {
+    filter: invert(100%)
+}
