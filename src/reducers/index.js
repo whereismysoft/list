@@ -7,9 +7,6 @@ const initialState = {
     ...data
 }
 
-const unshiftLastElemet = (arr) => {
-
-}
   export default function reducer(state = initialState, action) {
     const copy = deepCopy(state.data);
 
@@ -19,37 +16,33 @@ const unshiftLastElemet = (arr) => {
         const lastElement = copy.pop(); 
         copy.unshift(lastElement)
 
-        return { ...state, data:copy}
+        return { ...state, data: copy}
       };
 
       case constants.PUSH_FIRST_CARD: {
         const firstElement = copy.shift(); 
         copy.push(firstElement)
 
-        return { ...state, data:copy }
+        return { ...state, data: copy }
       };
 
       case constants.DELETE_FIRST_CARD: {
         copy.shift()
 
-        return { ...state, data:copy }
+        return { ...state, data: copy }
       };
 
       case constants.DELETE_LAST_CARD: {
         copy.pop()
 
-        return { ...state, data:copy }
+        return { ...state, data: copy }
       };
 
       case constants.ADD_NEW_ITEM: {
         const newItem = action.payload;
         copy.push(newItem)
-        console.log(copy)
 
-        return {
-          ...state,
-          data:copy
-        }
+        return { ...state, data: copy }
       };
 
     }
