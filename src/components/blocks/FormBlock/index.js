@@ -29,11 +29,11 @@ export default class FormBlock extends Component {
     handleMultipleInput = (e, index) => {
         e.preventDefault();
 
-        const copy = [...this.state.points];
+        const copy = [...this.state.attributes];
         copy[index] = e.target.value;
 
         this.setState({
-            points: copy
+            attributes: copy
         })
     }
 
