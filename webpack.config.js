@@ -42,7 +42,7 @@ module.exports = {
             actions: path.resolve(__dirname, 'src/actions'),
             reducers: path.resolve(__dirname, 'src/reducers'),
             utils: path.resolve(__dirname, 'src/utils'),
-            assets: path.resolve(__dirname, 'src/assets')
+            assets: path.resolve(__dirname, 'src/assets'),
         }
     },
     devServer: {

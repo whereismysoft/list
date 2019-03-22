@@ -1,23 +1,57 @@
 import * as constants from '../constants';
 import data from './data.json';
 
+import {deepCopy} from 'utils/copy';
+
 const initialState = {
     ...data
-}  
+}
+
+const unshiftLastElemet = (arr) => {
+
+}
   export default function reducer(state = initialState, action) {
+    const copy = deepCopy(state.data);
+
     switch (action.type) {
-      case constants.ADD_CARD: {
+
+      case constants.UNSHIFT_LAST_CARD: {
+        const lastElement = copy.pop(); 
+        copy.unshift(lastElement)
+
+        return { ...state, data:copy}
+      };
+
+      case constants.PUSH_FIRST_CARD: {
+        const firstElement = copy.shift(); 
+        copy.push(firstElement)
+
+        return { ...state, data:copy }
+      };
+
+      case constants.DELETE_FIRST_CARD: {
+        copy.shift()
+
+        return { ...state, data:copy }
+      };
+
+      case constants.DELETE_LAST_CARD: {
+        copy.pop()
+
+        return { ...state, data:copy }
+      };
+
+      case constants.ADD_NEW_ITEM: {
+        const newItem = action.payload;
+        copy.push(newItem)
+        console.log(copy)
+
         return {
           ...state,
-          [new Date().getTime()]: action.payload
+          data:copy
         }
       };
-      case constants.DELETE_CARD: {
-        delete state[action.payload]
-        return {
-          ...state
-        }
-      };
+
     }
     return state
   }

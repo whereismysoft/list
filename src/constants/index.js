@@ -1,3 +1,5 @@
-export const ADD_CARD = 'ADD_CARD';
-
-export const DELETE_CARD = 'DELETE_CARD';
+export const UNSHIFT_LAST_CARD = 'UNSHIFT_LAST_CARD';
+export const PUSH_FIRST_CARD = 'PUSH_FIRST_CARD';
+export const DELETE_FIRST_CARD = 'DELETE_FIRST_CARD';
+export const DELETE_LAST_CARD = 'DELETE_LAST_CARD';
+export const ADD_NEW_ITEM = 'ADD_NEW_ITEM';

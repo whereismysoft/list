@@ -64,8 +64,18 @@
     width: 100%;
     align-self: end;
     padding-bottom: 10px;
+    position: relative;
+}
+
+.card.block .card--index {
+    position: absolute;
+    right: 0;
 }
 
 .card.block .card--pointsBlock {
     padding-top: 10px;
-} 
+}
+
+.card.block .card--title {
+    width: unset;
+}

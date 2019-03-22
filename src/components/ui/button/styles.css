@@ -21,16 +21,38 @@
     outline: none;
 }
 
-.button:hover {
-    background-color: #717dbf;
-}
-
 .button.transparent {
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0);
+    color: #3f51b5;
 }
 
 .button.isSmall {
     margin: unset;
     width: auto;
     height: auto;
+    font-size: 15px;
+}
+
+.button.withPadding {
+    padding: 3px 5px;
+}
+
+.button.medium {
+    height: 30px;
+    font-size: 15px;
+    margin: unset;
+    max-width: 150px;
+}
+
+.button.marginTop {
+    margin-top: 20px;
+}
+
+.button.bold {
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #717dbf;
+    color: white;
 }
